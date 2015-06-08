@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8 />
+        <title>A simple map</title>
+        <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+        <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js '></script>
+        <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css ' rel='stylesheet' />
+        <style>
+            body { margin:0; padding:0; }
+            #map { position:absolute; top:0; bottom:0; width:100%; }
+            #zoom-level {
+                margin: 10px;
+                padding: 10px;
+                position: absolute;
+                right: 0;
+                top:0;
+                z-index: 1000;
+                background: #ddd;
+            }
+        #3D {
+            margin: 10px;
+            padding: 10px;
+            position: absolute;
+            left: 0;
+            top:0;
+            z-index: 1000;
+            background: #ddd;
+        }
+        </style>
+    </head>
+    <body>
+        <div id='map'></div>
+        <div id='zoom-level'>Zoom Level: 21</div>
+        <script>
+                    // Provide your access token
+                    L.mapbox.accessToken = 'pk.eyJ1IjoibW1laGVkaW4iLCJhIjoiYzgyMzg2Yzk2NDVkNGI3MTYyZmZmM2UyYTI1OGRhZTcifQ._k-l2ZJYP4mSDt7nKBStyA';
+                    // Create a map in the div #map
+                    var map = L.mapbox.map('map', 'mmehedin.c65d24f3', {
+                                           tileLayer: {
+                                           maxNativeZoom: 22 // The map will use zoom level 19 tiles for all zoom levels past 19
+                                           }
+                                           }).setView([35.305796, -80.732233], 21);//35.305796, -80.732233
+
+                    
+                    
+                    map.on('zoomend', function(){
+                            document.getElementById('zoom-level').innerHTML = 'Zoom Level: ' + map.getZoom();
+                        });
+        </script>
+        <div id='3D'>
+        <iframe src="https://3dwarehouse.sketchup.com/embed.html?mid=u6cc1e04b-fe37-47a1-8c08-5ef89158158b&width=400&height=300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="400" height="300" allowfullscreen></iframe>
+        </div>
+    </body>
+</html>

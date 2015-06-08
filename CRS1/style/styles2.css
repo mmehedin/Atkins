@@ -1,0 +1,169 @@
+/*Author: Mihai Mehedint
+Project: Towers of Hanoi
+*/
+
+body {
+  color: #45535A;
+  font: 12pt "Calibri", sans-serif;
+  background-color: #f6f6f6
+}
+
+
+
+.alertCheck{
+    background-color:red;
+    margin:0px;
+    padding:0px;
+
+}
+
+#wrapper{
+width: 1100px;
+margin: 0px auto;
+}
+
+#header {
+width: 1050px;
+background-color: #ededed;
+padding-right: 25px;
+padding-left: 25px;
+padding-bottom: 30px;
+position: relative;
+border-bottom: 1px outset #ffffff
+}
+
+
+#nav{
+background-color: #ededed;
+padding-right:25px;
+padding-left: 25px;
+position: absolute;
+left: 0;
+bottom: 10px;
+}
+
+
+#input {
+width: 250px;
+height: 550px;
+background-color: #ededed;
+float: left;
+margin: 0px auto;
+padding-right: 25px;
+padding-left: 25px;
+}
+
+
+#main {
+float: right;
+width: 750px;
+height: 550px;
+background-color: #e3e3e3;
+margin: 0px auto;
+padding-right: 25px;
+padding-left: 25px;
+}
+
+
+#footer {
+width: 1100px;
+background-color: #ededed;
+}
+
+h1, h2{
+	text-shadow:3px 3px 5px #ccc;
+}
+
+ul{
+color: red;
+  font: 12pt "Calibri", sans-serif;
+}
+
+ul#menu li a {
+    color:#696969;
+    display:block;
+    font-weight:bold;
+    line-height:2.8;
+    text-decoration:none;
+    width:100%;
+}
+
+/* class determining properities of list*/
+.inputLi{
+		border: 1px solid;
+	border-color:#e3e3e3;
+	border-radius: 0.3em;
+	box-shadow:  3px 3px 5px 6px #ccc;
+    width: 100%;
+	}
+
+.aULclass{
+color: #333300;
+font: 12pt "Calibri", sans-serif;
+list-style-type: none;
+alignment-adjust:baseline;
+	padding: 0px;
+	margin:10px 0;
+}
+
+
+.shadow {
+  box-shadow:         3px 3px 5px 6px #ccc;
+}
+.boxShadow{
+	box-shadow: 0px 3px 5px #FFFFFF;
+	}
+
+#header p{
+display: inline;
+
+}
+
+/* div border radius*/
+div{
+	border-top-left-radius: 1em;
+}
+li:not(:last-child) {
+    margin-bottom: 5px;
+
+}
+/*unvisited link*/
+a:link {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: #858566;
+}
+
+/* mouse over link */
+a:hover {
+    color: #FF0000;
+}
+
+/* selected link */
+a:active {
+    color: #0000FF;
+}
+
+/* mouse over list*/
+ul li:hover {
+   /* border: 1px dotted #ff0000; Red 2 pix dotted line border*/
+	background-color: #cccccc;
+}
+
+.shadow{
+	box-shadow: 10px 10px 5px #888888;
+    
+}
+
+.glow{
+    box-shadow: 0 0 100px yellow;
+    width: 50%;
+    height: 50%;
+    
+    /* The universe is black */
+    background-color: black;
+}
