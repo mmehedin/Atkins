@@ -1,0 +1,135 @@
+/*styled info div*/
+
+
+.information {
+    position: absolute;
+    top:10px;
+    left:-945px;
+    width:180px;
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    
+}
+.information h4 {
+    margin: 0 0 5px;
+    color: #777;
+}
+
+/*styled legend*/
+
+
+.legend {
+    position: relative;
+    top:80%;
+    right:0%;
+    line-height: 18px;
+    color: #555;
+}
+.legend i {
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+
+/*styled popup*/
+.custom .leaflet-popup-tip,
+.custom .leaflet-popup-content-wrapper {
+    background: #66FF33;
+    opacity: 0.8;
+    color: #ffffff;
+}
+
+.customNotAv .leaflet-popup-tip,
+.customNotAv .leaflet-popup-content-wrapper {
+    background: #ff0000;
+    opacity: 0.8;
+    color: #ffffff;
+}
+
+/*style and position controls*/
+.leaflet-control-zoom{
+    left: 0px;
+    top: 5px;
+}
+.leaflet-control-attribution{
+    left: 0px;
+     top: 25px;
+}
+
+.leaflet-tile-pane    { z-index: 2; }
+.leaflet-objects-pane { z-index: 3; }
+.leaflet-overlay-pane { z-index: 4; }
+.leaflet-shadow-pane  { z-index: 5; }
+.leaflet-marker-pane  { z-index: 6; }
+.leaflet-popup-pane   { z-index: 7; }
+
+/*style for path*/
+svg {
+        position: relative;
+    }
+current_path {
+    fill: black;
+    stroke-width: 2px;
+    stroke: red;
+    stroke-opacity: 1;
+}
+.travelMarker {
+    fill: yellow;
+    opacity: 0.75;
+}
+.waypoints {
+    fill: black;
+    opacity: 0;
+}
+
+.drinks {
+    stroke: black;
+    fill: red;
+}
+.lineConnect {
+    fill: none;
+    stroke: red;
+    stroke-width: 10px;
+    stroke-opacity: 1;
+    opacity: 1;
+}
+.locnames {
+    fill: yello;
+    text-shadow: 1px 1px 1px #FFF, 3px 3px 5px #000;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+/*button style*/
+.btn {
+    background: #3498db;
+    background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+    background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+    background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+    background-image: -o-linear-gradient(top, #3498db, #2980b9);
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+}

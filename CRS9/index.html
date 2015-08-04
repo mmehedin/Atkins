@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html ng-app="AtkinsApp">
+    <head>
+        <meta charset="UTF-8">
+            <title>Atkins Library Map</title>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+            <!--Menue Styles-->
+            <link rel="stylesheet" href="style/app.css">
+            <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+        <style type="text/css">
+            html, body {height: 100%; margin: 0; padding: 0;}
+            
+        </style>
+        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+        <link href="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-draw/v0.2.2/leaflet.draw.css" rel="stylesheet" />
+        <link rel="stylesheet" href="style/iconLayers.css" />
+        <link rel="stylesheet" href="http://k4r573n.github.io/leaflet-control-osm-geocoder/Control.OSMGeocoder.css"/>
+        <link rel="stylesheet" href="style/Legend.css" />
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+        <script src="https://code.angularjs.org/angular-1.0.0rc3.min.js"></script>
+     
+        
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxGECIbA9vYoBFKpYjY_j_SpeuBDMSPdc"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+        <script src="http://d3js.org/d3.v3.min.js" type="text/javascript"></script>
+        
+        <script
+        src="http://k4r573n.github.io/leaflet-control-osm-geocoder/Control.OSMGeocoder.js">
+        </script>
+        <script src="bower_components/raphael/raphael-min.js" type="text/javascript"></script>
+        <script type="text/javascript" src="bower_components/pathfinding/pathfinding-browser.min.js"></script>
+        <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-draw/v0.2.2/leaflet.draw.js"></script>
+        <!--Atkins Scripts-->
+        <script type="text/javascript" src = "scripts/app.js"></script>
+        <script type="text/javascript" src = "scripts/draggable.js"></script>
+        
+        <script type="text/javascript" src="scripts/study_status.js"></script>
+        <script type="text/javascript" src="scripts/mytiles.js"></script>
+        <script type="text/javascript" src="scripts/pathfinding.js"></script>
+        <script type="text/javascript" src="scripts/leaflet_layers.js"></script>
+        <script type="text/javascript" src="scripts/google_tiles.js"></script>
+        <script type="text/javascript" src="scripts/bouncemarker.js"></script>
+        <script type="text/javascript" src="scripts/geojson.json"></script>
+        <!--<script type="text/javascript" src="scripts/path_d3.geojson"></script>-->
+        <!--<script type="text/javascript" src="scripts/path.js"></script>-->
+        <script type="text/javascript" src="scripts/button_ctrl.js"></script>
+        <script type="text/javascript" src="scripts/time_delay.js"></script>
+        <script type="text/javascript" src="scripts/iconLayers.js"></script>
+        <script type="text/javascript" src="scripts/icon_controller.js"></script>
+        <script type="text/javascript" src="scripts/path_layer.js"></script>
+        
+
+       
+       
+    </head>
+    <body ng-controller="menu_controller"> <!-- onload = 'init()'>-->
+        
+        <div id = "the_menu">
+            <!--<h3>Total number of floors: {{number_floors}}</h3>-->
+            
+            <div  id = "floors_menu" class = "shadow_class">
+                <ul>
+                    <li  ng-repeat ="floor in floors" ng-click="showFloors($index);">
+                        <span ng-style="floor_style($index)" style="font-size:xx-large;"> {{floor.name}} </span>
+                        <ul>
+                            <li class="li_hover" ng-repeat ="resource in floor.resources" ng-show="floor.active" ng-mouseover="showResource($index, floor)">
+                                <div ng-app="" ng-model-options=""><a href="index.html"><span class={{resource.icon}}></span> {{resource.text}} <span class="badge"> {{resource.badge}}</span></a></div>
+                                
+                            </li>
+                            
+                        </ul>
+                        
+                    </li>
+                </ul>
+            </div>
+            <div id="buttons">
+                <button id="show_menu" ng-click = "showMenu()"><span class="glyphicon glyphicon-align-justify"></span></button>
+                <button id="hide_menu" ng-click = "showMenu()"><span class="glyphicon glyphicon-remove-circle"></span></button>
+            </div>
+            
+        </div>
+        
+    <!--
+    <div id="atkins_canvas" >
+        <figure>
+            <figcaption>{{floor_caption}}</figcaption>
+            <img id ='myI' ng-src={{floor_image}} alt="Atkins">
+                <script>console.log()</script>
+        </figure>
+    </div>
+    -->
+        <!--<div id="viewing-window">-->
+        <!--<div id="atkins_canvas" >-->
+        <!--<button id="helpbutton" role="button" class="btn btn-primary">Learn More</button>-->
+            <div id="map-canvas"></div>
+        <!--</div>-->
+        <!--</div>-->
+    </body>
+</html>

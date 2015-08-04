@@ -1,0 +1,40 @@
+{
+    "type": "FeatureCollection",
+    "crs": { "type": "name", "properties": { "name": "my_path" } },
+    
+    "features": [
+                 { "type": "Feature",
+                   "properties": {
+                                    "latitude": 30.937499999999996 ,
+                                    "longitude": 19.31114335506464,
+                                    "time": 1,
+                                    "id": "route1",
+                                    "name":"Start" },
+                    "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [ 19.31114335506464, 30.937499999999996 ]
+                                }
+                 },
+ 
+                 
+                 
+                 {  "type": "Feature",
+                    "properties": {
+                                    "latitude": 40.721580,
+                                    "longitude": -73.995480,
+                                    "time": 2,
+                                    "id": "route1",
+                                    "name":"Along route"  },
+                    "geometry": {
+                                    "type": "Point",
+                                    "coordinates": [ -73.99548, 40.72158 ]
+                                }
+                 },
+                 
+                 
+                 { "type": "Feature", "properties": { "latitude": 40.720890, "longitude": -73.993760, "time": 4, "id": "route1" , "name":"Along route"  }, "geometry": { "type": "Point", "coordinates": [ -73.99376, 40.72089 ] } },
+                 { "type": "Feature", "properties": { "latitude": 40.721580, "longitude": -73.993480, "time": 5, "id": "route1", "name":"Along route"   }, "geometry": { "type": "Point", "coordinates": [ -73.99348, 40.72158 ] } },
+                 
+                 { "type": "Feature", "properties": { "latitude": 74.95939165894974, "longitude": -146.95312499999997, "time": 18, "id": "route1", "name":"Destination"   }, "geometry": { "type": "Point", "coordinates": [-146.95312499999997, 74.95939165894974] } }
+                 ]
+}
